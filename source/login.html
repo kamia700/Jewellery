@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="CHjewellery | Online Shop with high-quality jewellery ">
+  <meta name="Keywords" content="jewellery, online, shop">
+  <title>CHjewellery</title>
+
+  <link rel="preload" href="fonts/Poppins-Bold.woff2" as="font">
+  <link rel="preload" href="fonts/Poppins-Medium.woff2" as="font">
+  <link rel="preload" href="fonts/Poppins-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/CormorantGaramond-SemiBold.woff2" as="font">
+  <link rel="preload" href="fonts/CormorantGaramond-Regular.woff2" as="font">
+  <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div style="display:none;">
+    <include src="build/images/sprite.svg"></include>
+  </div>
+
+  <main class="page-login">
+    <h1 class="visually-hidden">Log in page</h1>
+
+    <section class="login">
+      <div class="login__inner">
+        <button class="login__close close" type="button" aria-label="Close"></button>
+        <div class="login__img">
+          <picture>
+            <!-- 1х: 442px; 2x: 884px -->
+            <source type="image/webp" srcset="images/login-bg@1x.webp 1x, images/login-bg@2x.webp 2x">
+            <img src="images/login-bg@1x.jpg" srcset="images/login-bg@2x.jpg 2x" width="442" height="138" alt="background for popup">
+          </picture>
+        </div>
+
+        <div class="login__content">
+          <h2 class="login__title">Log In</h2>
+          <div class="login__form-container">
+            <form class="login__form" method="post" enctype="multipart/form-data" autocomplete="off" action="http://echo.htmlacademy.ru">
+              <div class="login__input login__input--email">
+                <label class="visually-hidden" for="email">E-mail</label>
+                <input class="login__email" id="email" name="email" type="email" placeholder="Your E-mail" required>
+              </div>
+              <div class="login__input login__input--password">
+                <label class="visually-hidden" for="password">Password</label>
+                <input class="login__password" id="password" name="password" type="password" placeholder="Password" required>
+              </div>
+              <div class="login__forgot-password">
+                <a href="#">Forgot your password?</a>
+              </div>
+              <button class="login__button" type="submit">Log In</button>
+            </form>
+          </div>
+          <div class="login__signup">
+            <p>Don’t have an account?<a href="#">Sign up</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script src="js/vendor.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

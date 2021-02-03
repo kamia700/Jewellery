@@ -1,0 +1,123 @@
+.irs {
+  position: relative;
+  display: block;
+  user-select: none;
+  font-size: 12px;
+}
+
+.irs-line {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  outline: none;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+  font-family: $font-main;
+  color: $main-text;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 500;
+  text-shadow: none;
+  padding: 20px 5px;
+  border-radius: 4px;
+}
+
+.irs-bar {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 0;
+}
+
+.irs-handle {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  cursor: default;
+  z-index: 1;
+}
+
+.irs-min,
+.irs-max {
+  display: none;
+}
+
+.irs-from,
+.irs-to,
+.irs-single {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.irs-hidden-input {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  z-index: -9999;
+  background: none;
+  border-style: solid;
+  border-color: transparent;
+}
+
+.irs--flat {
+  height: 40px;
+}
+
+.irs--flat .irs-line {
+  top: 5px;
+  height: 1px;
+  width: 200px;
+  border: 1px solid $beige-background;
+}
+
+.irs--flat .irs-bar {
+  top: 5px;
+  height: 1px;
+  background-color: $border;
+}
+
+.irs--flat .irs-handle {
+  top: 0;
+  width: 16px;
+  height: 18px;
+  background-color: transparent;
+}
+
+.irs--flat .irs-handle > i:first-child {
+  position: absolute;
+  display: block;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  margin-left: -1px;
+  border-radius: 50%;
+  background-color: $border;
+}
+
+.irs--flat .irs-handle.state_hover > i:first-child,
+.irs--flat .irs-handle:hover > i:first-child {
+  background-color: $handle-background;
+}
+
+
+@media (max-width: $tablet-width) {
+  .irs--flat .irs-line {
+    width: 304px;
+  }
+}

@@ -1,0 +1,248 @@
+.login {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.login__inner {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+
+  transform: translateX(-50%);
+  width: 430px;
+  height: 586px;
+  background: $beige-background;
+  box-shadow: 0 5px 32px $login-shadow;
+}
+
+.login__img {
+  position: relative;
+  margin-bottom: 15px;
+
+  & img {
+    width: 100%;
+    height: 138px;
+  }
+}
+
+.login__close {
+  position: absolute;
+  background-image: url("../images/close-login.svg");
+  width: 14px;
+  height: 14px;
+  right: 20px;
+  top: 20px;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  z-index: 7;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.login__title {
+  @include title;
+}
+
+.login__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__form-container {
+  width: 80%;
+}
+
+.login__input {
+  width: 100%;
+  margin-bottom: 27px;
+  border-bottom: 1px solid $main-text;
+}
+
+.login__input input {
+  font-family: $font-main;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey-text;
+  font-weight: 500;
+
+  width: 100%;
+  padding: 7px 0;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.login__input input::placeholder {
+  font-family: $font-main;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey-text;
+  font-weight: 500;
+}
+
+.login__forgot-password a {
+  display: block;
+  font-family: $font-main;
+  font-size: 12px;
+  line-height: 18px;
+  color: $grey-text;
+  font-weight: 500;
+  text-align: right;
+
+  padding-right: 3px;
+}
+
+.login__forgot-password {
+  margin-top: -22px;
+  margin-bottom: 47px;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.login__form-container button {
+  font-family: $font-main;
+  font-size: 16px;
+  line-height: 21px;
+  color: $white;
+
+  width: 100%;
+  border: none;
+  background: $border;
+  padding: 23px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.login__signup {
+  display: flex;
+
+  & p {
+    font-size: 14px;
+    line-height: 21px;
+    color: $grey-text;
+  }
+
+  & a {
+    font-size: 14px;
+    line-height: 21px;
+    color: $main-text;
+
+    padding-left: 8px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .login__inner {
+    top: 80px;
+    width: 445px;
+
+    &.modal__window {
+      top: 30px;
+      width: 442px;
+    }
+  }
+
+  .login__form-container {
+    width: 77%;
+  }
+
+  .login__close {
+    background-image: url("../images/close-login-tablet.svg");
+    right: 22px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .login__inner {
+    top: 50px;
+    width: 270px;
+    height: 470px;
+
+    &.modal__window {
+      top: 0;
+      width: 270px;
+    }
+  }
+
+  .login__form-container {
+    width: 89%;
+  }
+
+  .login__img {
+    margin-bottom: 12px;
+
+    & img {
+      height: 84px;
+    }
+  }
+
+  .login__close {
+    background-image: url("../images/close-login.svg");
+    right: 10px;
+    top: 15px;
+  }
+
+  .login__title {
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  .login__input {
+    margin-bottom: 23px;
+  }
+
+  .login__forgot-password {
+    margin-top: -18px;
+    margin-bottom: 35px;
+  }
+
+
+  .login__forgot-password a {
+    padding-right: 0;
+  }
+
+  .login__signup {
+    & a {
+      padding-left: 5px;
+    }
+  }
+}

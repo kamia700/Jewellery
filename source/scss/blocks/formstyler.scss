@@ -1,0 +1,50 @@
+.jq-checkbox,
+.jq-radio {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  user-select: none;
+  vertical-align: -1px;
+  width: 15.95px;
+  height: 15px;
+  margin: 0 8px 0 0;
+  border: 1px solid $border;
+  background: $white;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.jq-checkbox input,
+.jq-radio input {
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.jq-checkbox.focused,
+.jq-radio.focused {
+  border: 1px solid $border;
+}
+
+.jq-checkbox.disabled,
+.jq-radio.disabled {
+  opacity: 0.55;
+}
+
+.jq-checkbox.checked .jq-checkbox__div {
+  width: 8px;
+  height: 6px;
+  margin: 3px 0 0 3px;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(0);
+}
+
+.jq-checkbox.checked,
+.jq-radio.checked {
+  background: $border;
+  border: none;
+  border-radius: 0;
+}

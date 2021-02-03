@@ -1,0 +1,81 @@
+.catalog-promo {
+  background-color: $border;
+  background: url("../images/intro-catalog@1x.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: auto;
+
+  min-height: 261px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../images/intro-catalog@2x.jpg");
+  }
+
+  display: flex;
+  justify-content: center;
+
+  margin: 0 auto;
+  margin-bottom: 79px;
+  max-width: 1366px;
+
+}
+
+.catalog-promo__inner {
+  padding-top: 90px;
+}
+
+.catalog-promo__inner h2 {
+  @include title;
+  text-align: center;
+  color: $white;
+
+  margin-top: 0;
+  margin-bottom: -5px;
+}
+
+.catalog-promo__inner p {
+  font-family: $font-title;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 29px;
+  color: $white;
+
+  margin-top: 10px;
+}
+
+@media (max-width: $tablet-width) {
+  .catalog-promo {
+    background: url("../images/intro-catalog-tablet@1x.jpg");
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../images/intro-catalog-tablet@2x.jpg");
+    }
+
+    margin-bottom: 51px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .catalog-promo {
+    margin-bottom: 40px;
+
+    background: url("../images/intro-catalog-mobile@1x.jpg");
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../images/intro-catalog-mobile@2x.jpg");
+    }
+  }
+
+  .catalog-promo__inner {
+    padding-top: 79px;
+  }
+
+  .catalog-promo__inner p {
+    text-align: center;
+    padding: 0 30px;
+    margin-top: 5px;
+  }
+}
