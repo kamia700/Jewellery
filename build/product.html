@@ -43,7 +43,7 @@
   <header class="header header--catalog">
     <div class="header__top">
       <div class="header__top-inner container">
-        <button class="header__menu-btn" aria-label="open-close menu">
+        <button class="header__menu-btn" aria-label="open-close menu" type="button">
           <span class="header__btn-line"></span>
           <span class="header__btn-line"></span>
           <span class="header__btn-line"></span>
@@ -51,11 +51,11 @@
         <div class="header__search">
           <form class="header__form" role="search" method="get" enctype="multipart/form-data" autocomplete="off" action="http://echo.htmlacademy.ru">
             <label class="visually-hidden" for="search">Name of a product</label>
-            <input type="text" placeholder="Type here to search" id="search">
-            <button class="visually-hidden" aria-label="search"></button>
+            <input type="search" placeholder="Type here to search" id="search">
+            <button class="visually-hidden" aria-label="search" type="button"></button>
           </form>
         </div>
-        <a class="header__logo" href="index.html">
+        <a class="header__logo" href="index.html" aria-label="logotype">
           <svg class="header__logo-icon" width="66" height="66">
             <use xlink:href="#icon-logo"></use>
           </svg>
@@ -63,8 +63,7 @@
 
         <div class="header__controls">
           <a href="login.html" class="header__login login-link">Login</a>
-          <a href="cart.html">Cart <span>0</span></a>
-          <button class="header__controls-btn" aria-label="cart button"></button>
+          <a href="cart.html" class="header__controls-btn"><span>Cart 0</span></a>
         </div>
       </div>
     </div>
@@ -359,17 +358,78 @@
       </div>
     </section>
 
+    <footer class="footer">
+      <div class="footer__inner container">
+        <div class="footer__subscription">
+          <p class="footer__title">The good stuff in your inbox</p>
+          <p class="footer__text">News and updates from CH. No spam, we promise.</p>
+          <form action="post">
+            <label class="visually-hidden" for="footer-email">E-mail</label>
+            <input type="email" name="email" placeholder="Your E-mail" id="footer-email">
+            <button type="submit" aria-label="Подписаться">Sign Up</button>
+          </form>
+        </div>
+
+        <div class="footer__navigation">
+          <div class="footer__menu">
+            <ul class="footer__list-first">
+              <li class="footer__item"><a href="#">Ordering & Payment</a></li>
+              <li class="footer__item"><a href="#">Terms & Conditions</a></li>
+              <li class="footer__item"><a href="#">Returns & Exchanges</a></li>
+              <li class="footer__item"><a href="#">Delivery</a></li>
+            </ul>
+            <ul class="footer__list-second">
+              <li class="footer__item"><a href="#">About CH</a></li>
+              <li class="footer__item"><a href="#">Stores & Hours</a></li>
+              <li class="footer__item"><a href="#">Jobs</a></li>
+              <li class="footer__item"><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer__social">
+            <ul class="footer__list-social">
+              <li class="footer__item footer__item--fb">
+                <a href="https://www.facebook.com/" aria-label="Facebook">
+                  <svg class="footer__fb" width="10" height="15">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
+                  Facebook
+                </a>
+              </li>
+              <li class="footer__item footer__item--inst">
+                <a href="https://www.instagram.com/" aria-label="Instagram">
+                  <svg class="footer__ins" width="15" height="15">
+                    <use xlink:href="#icon-inst"></use>
+                  </svg>
+                  Instagram
+                </a>
+              </li>
+              <li class="footer__item footer__item--pint">
+                <a href="https://www.pinterest.com/" aria-label="Pinterest">
+                  <svg class="footer__pint" width="15" height="15">
+                    <use xlink:href="#icon-pint"></use>
+                  </svg>
+                  Pinterest
+                </a>
+              </li>
+              <li class="footer__item footer__item--twit">
+                <a href="https://www.twitter.com/" aria-label="Twitter">
+                  <svg class="footer__twit" width="15" height="13">
+                    <use xlink:href="#icon-twit"></use>
+                  </svg>
+                  Twitter
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <section class="login modal hidden">
       <div class="login__wrap modal__wrap">
         <div class="login__inner modal__window">
           <button class="login__close close" type="button"></button>
-          <div class="login__img">
-            <!-- 1х: 442px; 2x: 884px -->
-            <picture>
-              <source type="image/webp" srcset="images/login-bg@1x.webp 1x, images/login-bg@2x.webp 2x">
-              <img src="images/login-bg@1x.jpg" srcset="images/login-bg@2x.jpg 2x" width="442" height="138" alt="background for popup">
-          </picture>
-          </div>
+          <div class="login__img"></div>
 
           <div class="login__content">
             <h2 class="login__title">Log In</h2>
@@ -416,9 +476,9 @@
                 <p class="check__price">$ 115</p>
               </div>
               <div class="check__quantity">
-                <button class="check__plus"></button>
+                <button class="check__plus" type="button" aria-label="plus"></button>
                 <p class="check__number">1</p>
-                <button class="check__minus"></button>
+                <button class="check__minus" type="button" aria-label="minus"></button>
               </div>
             </div>
           </div>
@@ -440,76 +500,8 @@
       </div>
     </section>
 
-
-    <footer class="footer">
-      <div class="footer__inner container">
-        <div class="footer__subscription">
-          <p class="footer__title">The good stuff in your inbox</p>
-          <p class="footer__text">News and updates from CH. No spam, we promise.</p>
-          <form action="post">
-            <label class="visually-hidden" for="footer-email">E-mail</label>
-            <input type="email" name="email" placeholder="Your E-mail" id="footer-email">
-            <button type="submit" aria-label="Подписаться">Sign Up</button>
-          </form>
-        </div>
-
-        <div class="footer__navigation">
-          <div class="footer__menu">
-            <ul class="footer__list-first">
-              <li class="footer__item"><a href="#">Ordering & Payment</a></li>
-              <li class="footer__item"><a href="#">Terms & Conditions</a></li>
-              <li class="footer__item"><a href="#">Returns & Exchanges</a></li>
-              <li class="footer__item"><a href="#">Delivery</a></li>
-            </ul>
-            <ul class="footer__list-second">
-              <li class="footer__item"><a href="#">About CH</a></li>
-              <li class="footer__item"><a href="#">Stores & Hours</a></li>
-              <li class="footer__item"><a href="#">Jobs</a></li>
-              <li class="footer__item"><a href="#">Contact Us</a></li>
-            </ul>
-          </div>
-          <div class="footer__social">
-            <ul class="footer__list-social">
-              <li class="footer__item footer__item--fb">
-                <svg class="footer__fb" width="10" height="15">
-                  <use xlink:href="#icon-fb"></use>
-                </svg>
-                <a href="https://www.facebook.com/" aria-label="Facebook">
-                  Facebook
-                </a>
-              </li>
-              <li class="footer__item footer__item--inst">
-                <svg class="footer__ins" width="15" height="15">
-                  <use xlink:href="#icon-inst"></use>
-                </svg>
-                <a href="https://www.instagram.com/" aria-label="Instagram">
-                  Instagram
-                </a>
-              </li>
-              <li class="footer__item footer__item--pint">
-                <svg class="footer__pint" width="15" height="15">
-                  <use xlink:href="#icon-pint"></use>
-                </svg>
-                <a href="https://www.pinterest.com/" aria-label="Pinterest">
-                  Pinterest
-                </a>
-              </li>
-              <li class="footer__item footer__item--twit">
-                <svg class="footer__twit" width="15" height="13">
-                  <use xlink:href="#icon-twit"></use>
-                </svg>
-                <a href="https://www.twitter.com/" aria-label="Twitter">
-                  Twitter
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer>
-
   </main>
   <script src="js/vendor.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

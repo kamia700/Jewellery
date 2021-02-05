@@ -1,5 +1,5 @@
 .aside {
-  width: 250px;
+  min-width: 250px;
   margin-right: 50px;
 }
 
@@ -14,59 +14,23 @@
 }
 
 .aside__item {
-  padding-bottom: 24px;
+  padding-bottom: 23px;
   padding-top: 22px;
 }
 
 .aside__item:last-child {
-  padding-bottom: 15px;
-}
-
-.aside__item p {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 25px;
-  padding-right: 45px;
-  position: relative;
-  cursor: pointer;
-
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-  }
-
-  &:active {
-    opacity: 0.5;
-  }
+  padding-bottom: 10px;
 }
 
 .aside__item-content {
-  margin-top: 22px;
+  margin-top: 25px;
+  margin-bottom: 5px;
   padding-left: 35px;
   padding-right: 45px;
 }
 
-.aside__item-title {
-  margin-top: 29px;
-}
-
-.aside__item-title::before {
-  content: "";
-  position: absolute;
-  background-image: url("../images/arrow-down.svg");
-  right: 22px;
-  bottom: 5px;
-  width: 18px;
-  height: 11px;
-  transform: rotate(0deg);
-}
-
-.aside__item-title--active::before {
-  transform: rotate(180deg);
-}
-
 .aside__item-box:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .aside__item-box label {
@@ -78,6 +42,7 @@
 
 .aside__item--price .aside__item-content {
   padding-left: 25px;
+  margin-top: 21px;
 }
 
 .aside button {
@@ -92,6 +57,42 @@
   background: none;
   outline: none;
   cursor: pointer;
+}
+
+.aside__item .aside__item-title {
+  padding: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 25px;
+  padding-right: 45px;
+  position: relative;
+  cursor: pointer;
+  text-align: start;
+  font-weight: 500;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.aside__item-title::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/arrow-up.svg");
+  right: 22px;
+  bottom: 5px;
+  width: 18px;
+  height: 11px;
+  transform: rotate(0deg);
+}
+
+.aside__item-title--active::before {
+  transform: rotate(180deg);
 }
 
 .aside .aside__btn-apply {
@@ -126,15 +127,61 @@
   display: none;
 }
 
+.aside__item-label input {
+  position: absolute;
+  z-index: -1;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.aside__input-text {
+  position: relative;
+  padding: 0 0 0 25px;
+  cursor: pointer;
+}
+
+.aside__input-text::before {
+  content: "";
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 15.95px;
+  height: 15px;
+  margin: 0 8px 0 0;
+  border: 1px solid $border;
+  background: $white;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.aside__input:checked + .aside__input-text::before {
+  background: $border;
+  border: none;
+  border-radius: 0;
+}
+
+.aside__input:focus .aside__input-text::before {
+  border: 2px solid $border;
+  border-radius: 5px;
+}
+
+.aside__input:disabled .aside__input-text::before {
+  opacity: 0.55;
+}
+
 @media (max-width: $tablet-width) {
   .aside {
-    width: 60%;
+    width: 55%;
     margin-right: 0;
+    position: relative;
   }
 
   .aside__list {
     border: none;
     position: relative;
+    margin: 0 0 40px;
   }
 
   aside.aside--js .aside__form {
@@ -144,16 +191,21 @@
   aside.aside--active {
     position: fixed;
     top: 25px;
-    left: 20px;
+    left: 0;
     background-color: $white;
     box-shadow: 0 5px 32px $filter-shadow;
     z-index: 7;
+    height: 100vh;
+    overflow-y: visible;
 
     & .aside__close {
       display: block;
       margin-left: auto;
-      width: auto;
-      position: relative;
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      top: 0;
+      right: -10px;
 
       &::before {
         position: absolute;
@@ -162,9 +214,41 @@
         width: 32px;
         height: 32px;
         top: -15px;
-        right: -15px;
+        right: -7px;
+        z-index: 50;
       }
     }
+  }
+
+  .aside__item-box:not(:last-child) {
+    margin-bottom: 17px;
+  }
+
+  .aside__item:last-child {
+    padding-bottom: 30px;
+  }
+
+  .aside__item {
+    padding-bottom: 34px;
+    padding-top: 34px;
+  }
+
+  .aside__item-content {
+    padding-left: 30px;
+  }
+
+  .aside__input-text {
+    padding: 0 0 0 30px;
+  }
+
+  .aside__input-text::before {
+    width: 18px;
+    height: 18px;
+  }
+
+  .aside__item-box label {
+    font-size: 16px;
+    line-height: 21px;
   }
 
   .aside button {
@@ -172,8 +256,19 @@
     margin-left: 20px;
   }
 
+  .aside__item .aside__item-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    width: 100%;
+    padding-left: 0;
+    margin-right: 0;
+  }
+
   .aside__item--price .aside__item-content {
     width: 362px;
+    margin-top: 27px;
+    padding-left: 31px;
   }
 
   .aside__item--price {
@@ -181,8 +276,69 @@
   }
 
   .aside__item-title::before {
-    background-image: url("../images/arrow-down-tablet.svg");
-    width: 21px;
-    height: 12px;
+    background-image: url("../images/arrow-up-tablet.svg");
+    width: 25px;
+    height: 15px;
+    right: 58px;
+    bottom: 3px;
+  }
+}
+
+
+@media (max-width: $mobile-width) {
+  .aside {
+    width: 85%;
+  }
+
+  aside.aside--active {
+    top: 75px;
+    left: 50%;
+    max-height: 736px;
+    transform: translateX(-50%);
+  }
+
+  .aside__item {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  .aside__item .aside__item-title {
+    padding-right: 10px;
+  }
+
+  .aside button {
+    margin: 0 auto;
+    margin-left: 20px;
+    width: 230px;
+  }
+
+  .aside .aside__btn-apply,
+  .aside .aside__btn-reset {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 18px;
+  }
+
+  .aside__item-title::before {
+    right: 37px;
+  }
+
+  .aside__item-content {
+    padding-left: 30px;
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+
+  .aside__item--price .aside__item-content {
+    width: 250px;
+    padding: 0 10px;
+  }
+
+  .aside__item:last-child {
+    padding-bottom: 26px;
+  }
+
+  .aside__list {
+    margin: 0 0 30px;
   }
 }

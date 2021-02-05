@@ -80,7 +80,7 @@ if (document.querySelector('.login')) {
 
 var setPopupCheck = function () {
   var modalCheck = document.querySelector('.check');
-  var openCheck = document.querySelectorAll('.product-card__btn-link');
+  var openCheck = document.querySelectorAll('.product-card__button');
   var close = document.querySelector('.check__close');
   var targetCheck = document.querySelector('.check__wrap');
 
@@ -165,11 +165,13 @@ var checkFilter = function () {
   filter.addEventListener('click', function () {
     aside.classList.remove('aside--js');
     aside.classList.add('aside--active');
+    body.classList.add('lock');
   });
 
   asideClose.addEventListener('click', function () {
     aside.classList.remove('aside--active');
     aside.classList.add('aside--js');
+    body.classList.remove('lock');
   });
 };
 

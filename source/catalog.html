@@ -15,7 +15,7 @@
   <link rel="preload" href="fonts/CormorantGaramond-Regular.woff2" as="font">
   <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
- </head>
+</head>
 
 <body>
   <div style="display:none;">
@@ -25,7 +25,7 @@
   <header class="header header--catalog">
     <div class="header__top">
       <div class="header__top-inner container">
-        <button class="header__menu-btn" aria-label="open-close menu">
+        <button class="header__menu-btn" aria-label="open-close menu" type="button">
           <span class="header__btn-line"></span>
           <span class="header__btn-line"></span>
           <span class="header__btn-line"></span>
@@ -33,11 +33,11 @@
         <div class="header__search">
           <form class="header__form" role="search" method="get" enctype="multipart/form-data" autocomplete="off" action="http://echo.htmlacademy.ru">
             <label class="visually-hidden" for="search">Name of a product</label>
-            <input type="text" placeholder="Type here to search" id="search">
-            <button class="visually-hidden" aria-label="search"></button>
+            <input type="search" placeholder="Type here to search" id="search">
+            <button class="visually-hidden" aria-label="search" type="button"></button>
           </form>
         </div>
-        <a class="header__logo" href="index.html">
+        <a class="header__logo" href="index.html" aria-label="logotype">
           <svg class="header__logo-icon" width="66" height="66">
             <use xlink:href="#icon-logo"></use>
           </svg>
@@ -45,8 +45,7 @@
 
         <div class="header__controls">
           <a href="login.html" class="header__login login-link">Login</a>
-          <a href="cart.html">Cart <span>0</span></a>
-          <button class="header__controls-btn" aria-label="cart button"></button>
+          <a href="cart.html" class="header__controls-btn"><span>Cart 0</span></a>
         </div>
       </div>
     </div>
@@ -100,69 +99,77 @@
 
     <section class="catalog container">
       <h2 class="visually-hidden">Filter</h2>
-        <button class="catalog__aside-btn">Filter</button>
+        <button class="catalog__aside-btn" type="button">Filter</button>
 
         <aside class="catalog__aside aside">
-          <button class="aside__close"></button>
+          <button class="aside__close" aria-label="close button" type="button"></button>
           <form class="aside__form" method="get" enctype="multipart/form-data" autocomplete="off" action="http://echo.htmlacademy.ru">
             <ul class="aside__list">
               <li class="aside__item">
-                <p class="aside__item-title aside__item-title--active">Product</p>
-                <div class="aside__item-content">
-                    <div class="aside__item-box">
-                      <label class="aside__item-label">
-                        <input class="aside__filter-style filter-style" type="checkbox" checked>Necklaces
-                      </label>
-                    </div>
-                    <div class="aside__item-box">
-                      <label class="aside__item-label">
-                        <input class="aside__filter-style filter-style" type="checkbox" checked>Chokers
-                      </label>
-                    </div>
-                    <div class="aside__item-box">
-                      <label class="aside__item-label">
-                        <input class="aside__filter-style filter-style" type="checkbox">Rings
-                      </label>
-                    </div>
-                    <div class="aside__item-box">
-                      <label class="aside__item-label">
-                        <input class="aside__filter-style filter-style" type="checkbox" checked>Earrings
-                      </label>
-                    </div>
-                </div>
-              </li>
-              <li class="aside__item">
-                <p class="aside__item-title">Material</p>
+                <button class="aside__item-title" type="button">Product</button>
                 <div class="aside__item-content">
                   <div class="aside__item-box">
                     <label class="aside__item-label">
-                      <input class="aside__filter-style filter-style" type="checkbox">Gold
+                      <input class="aside__input" type="checkbox" name="Necklaces" checked>
+                      <div class="aside__input-text">Necklaces</div>
                     </label>
                   </div>
                   <div class="aside__item-box">
                     <label class="aside__item-label">
-                      <input class="aside__filter-style filter-style" type="checkbox" checked>Silver
+                      <input class="aside__input" type="checkbox" name="Chokers" checked>
+                      <div class="aside__input-text">Chokers</div>
+                    </label>
+                  </div>
+                  <div class="aside__item-box">
+                    <label class="aside__item-label">
+                      <input class="aside__input" type="checkbox" name="Rings">
+                      <div class="aside__input-text">Rings</div>
+                    </label>
+                  </div>
+                  <div class="aside__item-box">
+                    <label class="aside__item-label">
+                      <input class="aside__input" type="checkbox" name="Earrings" checked>
+                      <div class="aside__input-text">Earrings</div>
                     </label>
                   </div>
                 </div>
               </li>
               <li class="aside__item">
-                <p class="aside__item-title">Collection</p>
+                <button class="aside__item-title" type="button">Material</button>
                 <div class="aside__item-content">
                   <div class="aside__item-box">
                     <label class="aside__item-label">
-                      <input class="aside__filter-style filter-style" type="checkbox">Pink flamingo
+                      <input class="aside__input" type="checkbox" name="Gold">
+                      <div class="aside__input-text">Gold</div>
                     </label>
                   </div>
                   <div class="aside__item-box">
                     <label class="aside__item-label">
-                      <input class="aside__filter-style filter-style" type="checkbox" checked>Dreams
+                      <input class="aside__input" type="checkbox" name="Silver" checked>
+                      <div class="aside__input-text">Silver</div>
+                    </label>
+                  </div>
+                </div>
+              </li>
+              <li class="aside__item">
+                <button class="aside__item-title" type="button">Collection</button>
+                <div class="aside__item-content">
+                  <div class="aside__item-box">
+                    <label class="aside__item-label">
+                      <input class="aside__input" type="checkbox" name="Pink flamingo">
+                      <div class="aside__input-text">Pink flamingo</div>
+                    </label>
+                  </div>
+                  <div class="aside__item-box">
+                    <label class="aside__item-label">
+                      <input class="aside__input" type="checkbox" name="Dreams" checked>
+                      <div class="aside__input-text">Dreams</div>
                     </label>
                   </div>
                 </div>
               </li>
               <li class="aside__item aside__item--price">
-                <p class="aside__item-title aside__item-title--active">Price</p>
+                <button class="aside__item-title" type="button">Price</button>
                 <div class="aside__item-content">
                   <input type="text" class="js-range-slider" name="my_range" value=""
                   data-min="10" data-max="170"/>
@@ -170,7 +177,7 @@
               </li>
             </ul>
             <button class="aside__btn-apply" type="submit">Apply</button>
-            <button class="aside__btn-reset" type="submit">Clear All</button>
+            <button class="aside__btn-reset" type="reset">Clear All</button>
           </form>
         </aside>
 
@@ -316,7 +323,7 @@
       <h2 class="visually-hidden">Pagination</h2>
       <div class="catalog-pagination__inner container">
         <div class="catalog-pagination__wrapper pagination">
-          <button class="pagination__btn pagination__btn-previous">Previous</button>
+          <a class="pagination__btn pagination__btn-previous">Previous</a>
           <ul class="pagination__list">
             <li class="pagination__item active"><a href="#">1</a></li>
             <li class="pagination__item"><a href="#">2</a></li>
@@ -324,45 +331,7 @@
             <li class="pagination__item"><a href="#">4</a></li>
             <li class="pagination__item"><a href="#">5</a></li>
           </ul>
-          <button class="pagination__btn pagination__btn-next">Next</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="login modal hidden">
-      <div class="login__wrap modal__wrap">
-        <div class="login__inner modal__window">
-          <button class="login__close" type="button"></button>
-          <div class="login__img">
-            <!-- 1х: 442px; 2x: 884px -->
-            <picture>
-              <source type="image/webp" srcset="images/login-bg@1x.webp 1x, images/login-bg@2x.webp 2x">
-              <img src="images/login-bg@1x.jpg" srcset="images/login-bg@2x.jpg 2x" width="442" height="138" alt="background for popup">
-          </picture>
-          </div>
-
-          <div class="login__content">
-            <h2 class="login__title">Log In</h2>
-            <div class="login__form-container">
-              <form class="login__form" method="post" enctype="multipart/form-data" autocomplete="off" action="http://echo.htmlacademy.ru">
-                <div class="login__input login__input--email">
-                  <label class="visually-hidden" for="email">E-mail</label>
-                  <input class="login__email" id="email" name="email" type="email" placeholder="Your E-mail" required>
-                </div>
-                <div class="login__input login__input--password">
-                  <label class="visually-hidden" for="password">Password</label>
-                  <input class="login__password" id="password" name="password" type="password" placeholder="Password" required>
-                </div>
-                <div class="login__forgot-password">
-                  <a href="#">Forgot your password?</a>
-                </div>
-                <button class="login__button" type="submit" aria-label="log in">Log In</button>
-              </form>
-            </div>
-            <div class="login__signup">
-              <p>Don’t have an account?<a href="#">Sign up</a></p>
-            </div>
-          </div>
+          <a class="pagination__btn pagination__btn-next">Next</a>
         </div>
       </div>
     </section>
@@ -397,34 +366,34 @@
           <div class="footer__social">
             <ul class="footer__list-social">
               <li class="footer__item footer__item--fb">
-                <svg class="footer__fb" width="10" height="15">
-                  <use xlink:href="#icon-fb"></use>
-                </svg>
                 <a href="https://www.facebook.com/" aria-label="Facebook">
+                  <svg class="footer__fb" width="10" height="15">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg>
                   Facebook
                 </a>
               </li>
               <li class="footer__item footer__item--inst">
-                <svg class="footer__ins" width="15" height="15">
-                  <use xlink:href="#icon-inst"></use>
-                </svg>
                 <a href="https://www.instagram.com/" aria-label="Instagram">
+                  <svg class="footer__ins" width="15" height="15">
+                    <use xlink:href="#icon-inst"></use>
+                  </svg>
                   Instagram
                 </a>
               </li>
               <li class="footer__item footer__item--pint">
-                <svg class="footer__pint" width="15" height="15">
-                  <use xlink:href="#icon-pint"></use>
-                </svg>
                 <a href="https://www.pinterest.com/" aria-label="Pinterest">
+                  <svg class="footer__pint" width="15" height="15">
+                    <use xlink:href="#icon-pint"></use>
+                  </svg>
                   Pinterest
                 </a>
               </li>
               <li class="footer__item footer__item--twit">
-                <svg class="footer__twit" width="15" height="13">
-                  <use xlink:href="#icon-twit"></use>
-                </svg>
                 <a href="https://www.twitter.com/" aria-label="Twitter">
+                  <svg class="footer__twit" width="15" height="13">
+                    <use xlink:href="#icon-twit"></use>
+                  </svg>
                   Twitter
                 </a>
               </li>
@@ -434,8 +403,40 @@
       </div>
     </footer>
 
+    <section class="login modal hidden">
+      <div class="login__wrap modal__wrap">
+        <div class="login__inner modal__window">
+          <button class="login__close" type="button"></button>
+          <div class="login__img"></div>
+
+          <div class="login__content">
+            <h2 class="login__title">Log In</h2>
+            <div class="login__form-container">
+              <form class="login__form" method="post" enctype="multipart/form-data" autocomplete="off" action="http://echo.htmlacademy.ru">
+                <div class="login__input login__input--email">
+                  <label class="visually-hidden" for="email">E-mail</label>
+                  <input class="login__email" id="email" name="email" type="email" placeholder="Your E-mail" required>
+                </div>
+                <div class="login__input login__input--password">
+                  <label class="visually-hidden" for="password">Password</label>
+                  <input class="login__password" id="password" name="password" type="password" placeholder="Password" required>
+                </div>
+                <div class="login__forgot-password">
+                  <a href="#">Forgot your password?</a>
+                </div>
+                <button class="login__button" type="submit" aria-label="log in">Log In</button>
+              </form>
+            </div>
+            <div class="login__signup">
+              <p>Don’t have an account?<a href="#">Sign up</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
   <script src="js/vendor.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

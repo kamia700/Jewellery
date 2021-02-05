@@ -95,10 +95,6 @@
   }
 }
 
-.header__controls-btn {
-  display: none;
-}
-
 .header__bottom {
   display: flex;
   justify-content: center;
@@ -174,7 +170,12 @@
     display: none;
   }
 
-  .header__controls-btn {
+
+  .header__controls-btn span {
+    display: none;
+  }
+
+  .header__controls .header__controls-btn {
     position: relative;
     display: block;
     background: transparent;

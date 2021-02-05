@@ -120,4 +120,26 @@
   .irs--flat .irs-line {
     width: 304px;
   }
+
+  .irs--flat .irs-handle > i:first-child {
+    width: 18px;
+    height: 18px;
+  }
+
+  .irs--flat .irs-from,
+  .irs--flat .irs-to,
+  .irs--flat .irs-single {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .irs--flat .irs-line {
+    width: 250px;
+  }
+
+  .irs--flat {
+    width: 100%;
+  }
 }

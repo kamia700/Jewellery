@@ -187,6 +187,7 @@
     color: $main-text;
     background-color: $white;
     border: 1px solid $border;
+    margin-right: 30px;
   }
 
   & .check__checkout {
@@ -311,6 +312,10 @@
       width: 260px;
       margin-bottom: 22px;
       padding: 22px 10px;
+    }
+
+    & .check__continue {
+      margin-right: 0;
     }
   }
 }

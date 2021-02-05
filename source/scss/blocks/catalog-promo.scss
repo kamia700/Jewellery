@@ -1,9 +1,9 @@
 .catalog-promo {
   background-color: $border;
-  background: url("../images/intro-catalog@1x.jpg");
+  background-image: url("../images/intro-catalog@1x.jpg");
   background-position: top;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
 
   min-height: 261px;
 
@@ -16,8 +16,6 @@
 
   margin: 0 auto;
   margin-bottom: 79px;
-  max-width: 1366px;
-
 }
 
 .catalog-promo__inner {
