@@ -12,23 +12,8 @@
   transform: translateX(-50%);
   width: 430px;
   height: 586px;
-  background: $beige-background;
+  background-color: $beige-background;
   box-shadow: 0 5px 32px $login-shadow;
-}
-
-.login__img {
-  position: relative;
-  margin-bottom: 15px;
-  background: url("../images/login-bg@1x.jpg");
-  width: 100%;
-  height: 138px;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: auto;
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../images/login-bg@2x.jpg");
-  }
 }
 
 .login__close {
@@ -64,6 +49,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  position: relative;
+  margin-bottom: 15px;
+  padding-top: 160px;
+  background-image: url("../images/login-bg@1x.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 138px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../images/login-bg@2x.jpg");
+  }
 }
 
 .login__form-container {
@@ -212,14 +209,17 @@
     width: 89%;
   }
 
-  .login__img {
+  .login__content {
     margin-bottom: 12px;
-    height: 84px;
     background: url("../images/login-bg-mobile@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../images/login-bg-mobile@2x.jpg");
     }
+
+    padding-top: 100px;
+    background-size: 100% 84px;
+    background-repeat: no-repeat;
   }
 
   .login__close {
@@ -231,6 +231,7 @@
   .login__title {
     font-size: 24px;
     line-height: 31px;
+    margin-bottom: 23px;
   }
 
   .login__input {

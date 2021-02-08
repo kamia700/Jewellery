@@ -2434,12 +2434,13 @@ img {
     width: 49%; }
 
 .footer__item {
-  position: relative;
   margin-bottom: 20px; }
 
 .footer__item a {
-  display: inline-block;
-  color: #ffffff; }
+  position: relative;
+  display: block;
+  color: #ffffff;
+  padding-left: 30px; }
   .footer__item a:hover, .footer__item a:focus {
     color: rgba(255, 255, 255, 0.75); }
   .footer__item a:active {
@@ -2453,7 +2454,11 @@ img {
 .footer__item svg {
   position: absolute;
   top: 3px;
-  left: -30px; }
+  left: 0; }
+  .footer__item svg:hover, .footer__item svg:focus {
+    opacity: 0.8; }
+  .footer__item svg:active {
+    opacity: 0.5; }
 
 @media (max-width: 1023px) {
   .footer__inner {
@@ -2552,22 +2557,9 @@ img {
           transform: translateX(-50%);
   width: 430px;
   height: 586px;
-  background: #f0eae4;
+  background-color: #f0eae4;
   -webkit-box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24);
           box-shadow: 0 5px 32px rgba(226, 221, 215, 0.24); }
-
-.login__img {
-  position: relative;
-  margin-bottom: 15px;
-  background: url("../images/login-bg@1x.jpg");
-  width: 100%;
-  height: 138px;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: auto; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .login__img {
-      background-image: url("../images/login-bg@2x.jpg"); } }
 
 .login__close {
   position: absolute;
@@ -2604,7 +2596,17 @@ img {
           flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  position: relative;
+  margin-bottom: 15px;
+  padding-top: 160px;
+  background-image: url("../images/login-bg@1x.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% 138px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .login__content {
+      background-image: url("../images/login-bg@2x.jpg"); } }
 
 .login__form-container {
   width: 80%; }
@@ -2737,12 +2739,14 @@ img {
       width: 270px; }
   .login__form-container {
     width: 89%; }
-  .login__img {
+  .login__content {
     margin-bottom: 12px;
-    height: 84px;
-    background: url("../images/login-bg-mobile@1x.jpg"); } }
+    background: url("../images/login-bg-mobile@1x.jpg");
+    padding-top: 100px;
+    background-size: 100% 84px;
+    background-repeat: no-repeat; } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
-    .login__img {
+    .login__content {
       background-image: url("../images/login-bg-mobile@2x.jpg"); } }
 
 @media (max-width: 767px) {
@@ -2752,7 +2756,8 @@ img {
     top: 15px; }
   .login__title {
     font-size: 24px;
-    line-height: 31px; }
+    line-height: 31px;
+    margin-bottom: 23px; }
   .login__input {
     margin-bottom: 23px; }
   .login__forgot-password {

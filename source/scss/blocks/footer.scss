@@ -115,13 +115,14 @@
 }
 
 .footer__item {
-  position: relative;
   margin-bottom: 20px;
 }
 
 .footer__item a {
-  display: inline-block;
+  position: relative;
+  display: block;
   color: $white;
+  padding-left: 30px;
 
   &:hover,
   &:focus {
@@ -142,7 +143,16 @@
 .footer__item svg {
   position: absolute;
   top: 3px;
-  left: -30px;
+  left: 0;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 @media (max-width: $tablet-width) {
