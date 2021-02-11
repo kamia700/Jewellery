@@ -10102,11 +10102,17 @@ if (document.querySelector('.news__slider')) {
 }
 
 
+var addAsideToggle = function () {
+  $('.aside__item-title').on('click', function(){
+    $(this).next().slideToggle(200);
+    $(this).toggleClass('aside__item-title--active');
+  });
+};
 
-$('.aside__item-title').on('click', function(){
-  $(this).next().slideToggle(200);
-  $(this).toggleClass('aside__item-title--active');
-});
+if (document.querySelector('.aside')) {
+  addAsideToggle();
+}
+
 
 var addRangeSlider = function () {
   $(".js-range-slider").ionRangeSlider({

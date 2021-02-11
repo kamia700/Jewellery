@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
+
 <body>
   <div style="display:none;">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow-left-tablet" viewBox="0 0 37 17">
@@ -63,7 +64,7 @@
 
         <div class="header__controls">
           <a href="login.html" class="header__login login-link">Login</a>
-          <a href="cart.html" class="header__controls-btn"><span>Cart 0</span></a>
+          <a href="cart.html" class="header__controls-btn" aria-label="Cart"><span>Cart 0</span></a>
         </div>
       </div>
     </div>
@@ -205,18 +206,16 @@
             </div>
           </div>
         </div>
-
-
       </div>
 
     </section>
 
     <section class="product-news news">
       <div class="news__inner container">
-        <h2 class="news__title">You May Also Like</h2>
+        <h2 class="news__title news__title--product">You May Also Like</h2>
         <a href="#" class="news__shop-now">Shop Now</a>
 
-      <ul class="news__slider">
+      <ul class="news__slider news__slider--product">
         <li class="news__item">
           <a href="#" class="news__item-link">
             <!-- 1х: 270px; 2x: 540px -->
@@ -393,7 +392,7 @@
                 <svg class="footer__fb" width="10" height="15">
                   <use xlink:href="#icon-fb"></use>
                 </svg>
-                Facebook
+                <span>Facebook</span>
               </a>
             </li>
             <li class="footer__item footer__item--inst">
@@ -401,7 +400,7 @@
                 <svg class="footer__ins" width="15" height="15">
                   <use xlink:href="#icon-inst"></use>
                 </svg>
-                Instagram
+                <span>Instagram</span>
               </a>
             </li>
             <li class="footer__item footer__item--pint">
@@ -409,7 +408,7 @@
                 <svg class="footer__pint" width="15" height="15">
                   <use xlink:href="#icon-pint"></use>
                 </svg>
-                Pinterest
+                <span>Pinterest</span>
               </a>
             </li>
             <li class="footer__item footer__item--twit">
@@ -417,7 +416,7 @@
                 <svg class="footer__twit" width="15" height="13">
                   <use xlink:href="#icon-twit"></use>
                 </svg>
-                Twitter
+                <span>Twitter</span>
               </a>
             </li>
           </ul>

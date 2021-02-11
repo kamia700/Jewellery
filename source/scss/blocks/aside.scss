@@ -25,12 +25,12 @@
 .aside__item-content {
   margin-top: 25px;
   margin-bottom: 5px;
-  padding-left: 35px;
+  padding-left: 34px;
   padding-right: 45px;
 }
 
 .aside__item-box:not(:last-child) {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .aside__item-box label {
@@ -133,6 +133,8 @@
   margin: 0;
   padding: 0;
   opacity: 0;
+  width: 15px;
+  height: 15px;
 }
 
 .aside__input-text {
