@@ -19,9 +19,9 @@
 .login__close {
   position: absolute;
   background-image: url("../images/close-login.svg");
-  width: 14px;
-  height: 14px;
-  right: 20px;
+  width: 25px;
+  height: 25px;
+  right: 10px;
   top: 20px;
 
   border: none;
@@ -33,6 +33,7 @@
 
   &:hover,
   &:focus {
+    outline: 1px dotted $main-text;
     opacity: 0.7;
   }
 
@@ -69,14 +70,14 @@
 
 .login__input {
   width: 100%;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 }
 
 .login__input input {
   font-family: $font-main;
   font-size: 14px;
   line-height: 21px;
-  color: $grey-text;
+  color: $main-text;
   font-weight: 500;
 
   width: 100%;
@@ -85,6 +86,7 @@
   border: none;
   outline: none;
   border-bottom: 1px solid $main-text;
+  border-radius: 0;
 
   &:focus,
   &:hover {
@@ -101,20 +103,22 @@
 }
 
 .login__forgot-password a {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   font-family: $font-main;
   font-size: 12px;
   line-height: 18px;
   color: $grey-text;
   font-weight: 500;
-  text-align: right;
 
   padding-right: 3px;
 }
 
 .login__forgot-password {
   margin-top: -22px;
-  margin-bottom: 47px;
+  margin-bottom: 45px;
+  margin-left: auto;
+  width: 41%;
 
   &:hover,
   &:focus {
@@ -196,6 +200,10 @@
     width: 20px;
     height: 20px;
   }
+
+  .login__forgot-password {
+    width: 41.5%;
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -240,12 +248,14 @@
   }
 
   .login__input {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
   }
 
   .login__forgot-password {
     margin-top: -18px;
     margin-bottom: 35px;
+
+    width: 57.5%;
   }
 
 

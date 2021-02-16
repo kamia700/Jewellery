@@ -94,6 +94,7 @@ var setPopupCheck = function () {
   var openModalCheck = function () {
     modalCheck.classList.remove('hidden');
     body.classList.add('lock');
+    close.focus();
     document.addEventListener('keydown', popupEscPressHandler);
   };
 
@@ -181,6 +182,9 @@ if (document.querySelector('.aside')) {
 
 // accordion
 var setAccordion = function () {
+  var accordionList = document.querySelector('.accordion__list');
+  accordionList.classList.add('accordion__list--js');
+
   document.querySelectorAll('.accordion__btn').forEach(function (item) {
     item.addEventListener('click', function () {
       var parent = item.parentNode;

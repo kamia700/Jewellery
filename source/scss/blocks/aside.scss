@@ -133,8 +133,8 @@
   margin: 0;
   padding: 0;
   opacity: 0;
-  width: 15px;
-  height: 15px;
+  width: 21px;
+  height: 21px;
 }
 
 .aside__input-text {
@@ -164,9 +164,8 @@
   border-radius: 0;
 }
 
-.aside__input:focus .aside__input-text::before {
-  border: 2px solid $border;
-  border-radius: 5px;
+.aside__input:focus + .aside__input-text::before {
+  outline: 2px dotted $black-text;
 }
 
 .aside__input:disabled .aside__input-text::before {
@@ -175,9 +174,15 @@
 
 @media (max-width: $tablet-width) {
   .aside {
-    width: 55%;
+    width: 58.8%;
     margin-right: 0;
     position: relative;
+    padding: 15px;
+  }
+
+  .aside__inner {
+    background-color: $white;
+    box-shadow: 0 5px 32px $filter-shadow;
   }
 
   .aside__list {
@@ -192,13 +197,14 @@
 
   aside.aside--active {
     position: fixed;
-    top: 25px;
-    left: 0;
-    background-color: $white;
-    box-shadow: 0 5px 32px $filter-shadow;
+    top: 11px;
+    left: -15px;
+    background-color: transparent;
+
     z-index: 7;
     height: 100vh;
-    overflow-y: visible;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     & .aside__close {
       display: block;
@@ -206,8 +212,8 @@
       position: absolute;
       width: 32px;
       height: 32px;
-      top: 0;
-      right: -10px;
+      top: 15px;
+      right: 5px;
 
       &::before {
         position: absolute;
@@ -231,12 +237,13 @@
   }
 
   .aside__item {
-    padding-bottom: 34px;
+    padding-bottom: 33px;
     padding-top: 34px;
   }
 
   .aside__item-content {
     padding-left: 30px;
+    margin-top: 26px;
   }
 
   .aside__input-text {
@@ -289,14 +296,23 @@
 
 @media (max-width: $mobile-width) {
   .aside {
-    width: 85%;
+    width: 93%;
+  }
+
+  .aside__inner {
+    height: auto;
+    padding-bottom: 11px;
   }
 
   aside.aside--active {
-    top: 75px;
+    top: 61px;
     left: 50%;
-    max-height: 736px;
     transform: translateX(-50%);
+
+    & .aside__close {
+      top: 14px;
+      right: 10px;
+    }
   }
 
   .aside__item {

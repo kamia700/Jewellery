@@ -12,7 +12,7 @@
 }
 
 .accordion__item {
-  padding-top: 25px;
+  padding-top: 43px;
   padding-bottom: 33px;
 }
 
@@ -24,20 +24,34 @@
   padding-left: 40px;
   padding-right: 10px;
 
-  &:hover,
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: start;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 500;
+  color: $main-text;
+  font-family: $font-main;
+  outline: none;
+
   &:focus {
     opacity: 0.7;
   }
 
-  &:active {
+  &:hover {
     opacity: 0.5;
   }
 
-  & p {
+  & span {
+    display: inline-block;
+    vertical-align: middle;
     font-size: 18px;
     line-height: 23px;
     margin-bottom: 10px;
     padding-right: 100px;
+
+    margin-top: 0;
   }
 
   &::after {
@@ -51,8 +65,6 @@
 }
 
 .accordion__panel {
-  display: none;
-
   & p {
     font-size: 16px;
     line-height: 21px;
@@ -60,6 +72,12 @@
     max-width: 575px;
     margin-top: 0;
     padding-left: 45px;
+  }
+}
+
+.accordion__list.accordion__list--js {
+  & .accordion__panel {
+    display: none;
   }
 }
 
@@ -131,7 +149,7 @@
 
 @media (max-width: $mobile-width) {
   .accordion__btn {
-    padding-left: 25px;
+    padding-left: 23px;
     padding-right: 50px;
 
     & p {
@@ -151,7 +169,7 @@
   }
 
   .accordion__item {
-    padding-top: 0;
+    padding-top: 16px;
     padding-bottom: 8px;
   }
 

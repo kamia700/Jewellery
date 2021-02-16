@@ -18,6 +18,10 @@
   &:hover,
   &:focus {
     scale: 1.03;
+
+    & img {
+      box-shadow: 0 0 10px $shadow;
+    }
   }
 
   &:active {

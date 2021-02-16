@@ -101,7 +101,20 @@
 }
 
 .news__slider--product {
-  padding: 0 0 125px;
+  padding: 0 0 124px;
+}
+
+.news__title.news__title--product {
+  margin-top: 112px;
+  margin-bottom: 21px;
+}
+
+.news__shop-now.news__shop-now--product {
+  margin-bottom: 63px;
+}
+
+.news__slider--product .slick-arrow__btnprev {
+  top: 154px;
 }
 
 
@@ -152,22 +165,22 @@
     width: 100%;
     padding-bottom: 35px;
   }
-}
 
-.news__title.news__title--product {
-  margin-top: 72px;
-}
+  .news__title.news__title--product {
+    margin-top: 71px;
+  }
 
-.news__slider--product {
-  padding-bottom: 75px;
-}
+  .news__slider--product {
+    padding-bottom: 73px;
+  }
 
-.news__slider--product .slick-arrow__btnprev {
-  top: 112px;
-}
+  .news__slider--product .slick-arrow__btnprev {
+    top: 112px;
+  }
 
-.news__slider--product .slick-arrow__btnnext {
-  top: 112px;
+  .news__slider--product .slick-arrow__btnnext {
+    top: 112px;
+  }
 }
 
 @media (max-width: $mobile-width) {
@@ -203,6 +216,6 @@
   }
 
   .news__slider--product {
-    padding-bottom: 65px;
+    padding-bottom: 61px;
   }
 }

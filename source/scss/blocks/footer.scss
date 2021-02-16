@@ -47,7 +47,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
-    color: $grey-text;
+    color: $white;
 
     background-color: $black-text;
     border: none;
@@ -55,6 +55,13 @@
     width: 77%;
 
     padding-bottom: 10px;
+
+    &::placeholder {
+      font-family: $font-main;
+      font-size: 14px;
+      line-height: 21px;
+      color: $grey-text;
+    }
   }
 
   & form {
@@ -73,6 +80,7 @@
     font-size: 16px;
     line-height: 21px;
     position: relative;
+    cursor: pointer;
 
     &::before {
       position: absolute;
@@ -117,12 +125,13 @@
 }
 
 .footer__item {
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .footer__item a {
   position: relative;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   color: $white;
 
   &:hover,
@@ -136,7 +145,7 @@
 }
 
 .footer__list-second a {
-  padding-left: 15px;
+  padding-left: 12px;
 }
 
 .footer__social a {
@@ -195,6 +204,10 @@
 
   .footer__menu ul {
     width: 46%;
+  }
+
+  .footer__list-second a {
+    padding-left: 15px;
   }
 }
 

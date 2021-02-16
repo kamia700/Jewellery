@@ -10069,7 +10069,7 @@ var addSliderNews = function () {
     nextArrow: '<button class="news__slider-btn slick-arrow__btnnext" aria-label="arrow next"><img src="images/icon-arrow-right.svg" alt="arrow next" width="30" height="11"></button>',
     responsive: [
       {
-        breakpoint: 1023,
+        breakpoint: 1024,
         settings: {
           slidesToScroll: 2,
           slidesToShow: 2,

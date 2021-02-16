@@ -37,7 +37,7 @@
             <button class="visually-hidden" aria-label="search" type="submit"></button>
           </form>
         </div>
-        <a class="header__logo" aria-label="logotype">
+        <a class="header__logo header__logo--main" href="catalog.html" aria-label="logotype">
           <svg class="header__logo-icon" width="66" height="66">
             <use xlink:href="#icon-logo"></use>
           </svg>
@@ -281,12 +281,13 @@
 
         <div class="blog__right">
           <article class="blog__poster-big">
-            <!-- 1х: 570px; 2x: 1140px -->
-            <picture>
-              <source type="image/webp" srcset="images/alve-odonnell-desktop@1x.webp 1x, images/alve-odonnell-desktop@2x.webp 2x">
-              <img src="images/alve-odonnell-desktop@1x.jpg" srcset="images/alve-odonnell-desktop@2x.jpg 2x" width="570" height="630" alt="rings from the new collection on female hands">
-            </picture>
-
+            <div class="blog__photo-big">
+              <!-- 1х: 570px; 2x: 1140px -->
+              <picture>
+                <source type="image/webp" srcset="images/alve-odonnell-desktop@1x.webp 1x, images/alve-odonnell-desktop@2x.webp 2x">
+                <img src="images/alve-odonnell-desktop@1x.jpg" srcset="images/alve-odonnell-desktop@2x.jpg 2x" width="570" height="630" alt="rings from the new collection on female hands">
+              </picture>
+            </div>
             <div class="blog__info blog__info--big">
               <p class="blog__data">September 16, 2019</p>
               <h2 class="blog__poster-title">AW 19 trends</h2>
@@ -302,33 +303,33 @@
         <h2>Frequently asked questions</h2>
         <ul class="accordion__list">
           <li class="accordion__item">
-            <div class="accordion__btn accordion__btn--one">
-              <p>What materials are the&nbsp;jewellery made of?</p>
-            </div>
+            <button class="accordion__btn accordion__btn--one">
+              <span>What materials are the&nbsp;jewellery made of?</span>
+            </button>
             <div class="accordion__panel">
               <p>Our jewellerry is made of solid gold, silver or leather.  Also, some jewellery contains precious and semiprecious stones and crystals.</p>
             </div>
           </li>
           <li class="accordion__item">
-            <div class="accordion__btn accordion__btn--two">
-              <p>Which countries do&nbsp;you&nbsp;deliver to?</p>
-            </div>
+            <button class="accordion__btn accordion__btn--two">
+              <span>Which countries do&nbsp;you&nbsp;deliver to?</span>
+            </button>
             <div class="accordion__panel">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
           </li>
           <li class="accordion__item accordion__item--active">
-            <div class="accordion__btn accordion__btn--three">
-              <p>What are the payment&nbsp;methods?</p>
-            </div>
+            <button class="accordion__btn accordion__btn--three">
+              <span>What are the payment&nbsp;methods?</span>
+            </button>
             <div class="accordion__panel">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
           </li>
           <li class="accordion__item">
-            <div class="accordion__btn accordion__btn--four">
-              <p>Can I return the jewellery&nbsp;if it didn’t fit me?</p>
-            </div>
+            <button class="accordion__btn accordion__btn--four">
+              <span>Can I return the jewellery&nbsp;if it didn’t fit me?</span>
+            </button>
             <div class="accordion__panel">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
@@ -407,7 +408,7 @@
         <p class="footer__text">News and updates from CH. No spam, we promise.</p>
         <form action="post">
           <label class="visually-hidden" for="footer-email">E-mail</label>
-          <input type="email" name="email" placeholder="Your E-mail" id="footer-email">
+          <input type="email" name="email" placeholder="Your E-mail" id="footer-email" required>
           <button type="submit" aria-label="Подписаться">Sign Up</button>
         </form>
       </div>

@@ -120,82 +120,84 @@
         <button class="catalog__aside-btn" type="button">Filter</button>
 
         <aside class="catalog__aside aside">
-          <button class="aside__close" aria-label="close button" type="button"></button>
-          <form class="aside__form" method="get" enctype="multipart/form-data" autocomplete="off" action="http://echo.htmlacademy.ru">
-            <ul class="aside__list">
-              <li class="aside__item">
-                <button class="aside__item-title" type="button">Product</button>
-                <div class="aside__item-content">
-                  <div class="aside__item-box">
-                    <label class="aside__item-label">
-                      <input class="aside__input" type="checkbox" name="Necklaces" checked="">
-                      <span class="aside__input-text">Necklaces</span>
-                    </label>
+          <div class="aside__inner">
+            <button class="aside__close" aria-label="close button" type="button"></button>
+            <form class="aside__form" method="get" enctype="multipart/form-data" autocomplete="off" action="http://echo.htmlacademy.ru">
+              <ul class="aside__list">
+                <li class="aside__item">
+                  <button class="aside__item-title" type="button">Product</button>
+                  <div class="aside__item-content">
+                    <div class="aside__item-box">
+                      <label class="aside__item-label">
+                        <input class="aside__input" type="checkbox" name="Necklaces" checked="">
+                        <span class="aside__input-text">Necklaces</span>
+                      </label>
+                    </div>
+                    <div class="aside__item-box">
+                      <label class="aside__item-label">
+                        <input class="aside__input" type="checkbox" name="Chokers" checked="">
+                        <span class="aside__input-text">Chokers</span>
+                      </label>
+                    </div>
+                    <div class="aside__item-box">
+                      <label class="aside__item-label">
+                        <input class="aside__input" type="checkbox" name="Rings">
+                        <span class="aside__input-text">Rings</span>
+                      </label>
+                    </div>
+                    <div class="aside__item-box">
+                      <label class="aside__item-label">
+                        <input class="aside__input" type="checkbox" name="Earrings" checked="">
+                        <span class="aside__input-text">Earrings</span>
+                      </label>
+                    </div>
                   </div>
-                  <div class="aside__item-box">
-                    <label class="aside__item-label">
-                      <input class="aside__input" type="checkbox" name="Chokers" checked="">
-                      <span class="aside__input-text">Chokers</span>
-                    </label>
+                </li>
+                <li class="aside__item">
+                  <button class="aside__item-title" type="button">Material</button>
+                  <div class="aside__item-content">
+                    <div class="aside__item-box">
+                      <label class="aside__item-label">
+                        <input class="aside__input" type="checkbox" name="Gold">
+                        <span class="aside__input-text">Gold</span>
+                      </label>
+                    </div>
+                    <div class="aside__item-box">
+                      <label class="aside__item-label">
+                        <input class="aside__input" type="checkbox" name="Silver" checked="">
+                        <span class="aside__input-text">Silver</span>
+                      </label>
+                    </div>
                   </div>
-                  <div class="aside__item-box">
-                    <label class="aside__item-label">
-                      <input class="aside__input" type="checkbox" name="Rings">
-                      <span class="aside__input-text">Rings</span>
-                    </label>
+                </li>
+                <li class="aside__item">
+                  <button class="aside__item-title" type="button">Collection</button>
+                  <div class="aside__item-content">
+                    <div class="aside__item-box">
+                      <label class="aside__item-label">
+                        <input class="aside__input" type="checkbox" name="Pink flamingo">
+                        <span class="aside__input-text">Pink flamingo</span>
+                      </label>
+                    </div>
+                    <div class="aside__item-box">
+                      <label class="aside__item-label">
+                        <input class="aside__input" type="checkbox" name="Dreams" checked="">
+                        <span class="aside__input-text">Dreams</span>
+                      </label>
+                    </div>
                   </div>
-                  <div class="aside__item-box">
-                    <label class="aside__item-label">
-                      <input class="aside__input" type="checkbox" name="Earrings" checked="">
-                      <span class="aside__input-text">Earrings</span>
-                    </label>
+                </li>
+                <li class="aside__item aside__item--price">
+                  <button class="aside__item-title" type="button">Price</button>
+                  <div class="aside__item-content">
+                    <input type="text" class="js-range-slider" name="my_range" value="" data-min="10" data-max="170">
                   </div>
-                </div>
-              </li>
-              <li class="aside__item">
-                <button class="aside__item-title" type="button">Material</button>
-                <div class="aside__item-content">
-                  <div class="aside__item-box">
-                    <label class="aside__item-label">
-                      <input class="aside__input" type="checkbox" name="Gold">
-                      <span class="aside__input-text">Gold</span>
-                    </label>
-                  </div>
-                  <div class="aside__item-box">
-                    <label class="aside__item-label">
-                      <input class="aside__input" type="checkbox" name="Silver" checked="">
-                      <span class="aside__input-text">Silver</span>
-                    </label>
-                  </div>
-                </div>
-              </li>
-              <li class="aside__item">
-                <button class="aside__item-title" type="button">Collection</button>
-                <div class="aside__item-content">
-                  <div class="aside__item-box">
-                    <label class="aside__item-label">
-                      <input class="aside__input" type="checkbox" name="Pink flamingo">
-                      <span class="aside__input-text">Pink flamingo</span>
-                    </label>
-                  </div>
-                  <div class="aside__item-box">
-                    <label class="aside__item-label">
-                      <input class="aside__input" type="checkbox" name="Dreams" checked="">
-                      <span class="aside__input-text">Dreams</span>
-                    </label>
-                  </div>
-                </div>
-              </li>
-              <li class="aside__item aside__item--price">
-                <button class="aside__item-title" type="button">Price</button>
-                <div class="aside__item-content">
-                  <input type="text" class="js-range-slider" name="my_range" value="" data-min="10" data-max="170">
-                </div>
-              </li>
-            </ul>
-            <button class="aside__btn-apply" type="submit">Apply</button>
-            <button class="aside__btn-reset" type="reset">Clear All</button>
-          </form>
+                </li>
+              </ul>
+              <button class="aside__btn-apply" type="submit">Apply</button>
+              <button class="aside__btn-reset" type="reset">Clear All</button>
+            </form>
+          </div>
         </aside>
 
         <div class="catalog__wrapper">
@@ -361,7 +363,7 @@
         <p class="footer__text">News and updates from CH. No spam, we promise.</p>
         <form method="post" enctype="multipart/form-data" autocomplete="off" action="http://echo.htmlacademy.ru">
           <label class="visually-hidden" for="footer-email">E-mail</label>
-          <input type="email" name="email" placeholder="Your E-mail" id="footer-email">
+          <input type="email" name="email" placeholder="Your E-mail" id="footer-email" required="">
           <button type="submit" aria-label="Подписаться">Sign Up</button>
         </form>
       </div>
@@ -453,6 +455,6 @@
 
 
   <script src="js/vendor.js"></script>
-  <script src="js/main.js"></script>
+  <!-- <script src="js/main.js"></script> -->
 </body>
 </html>
