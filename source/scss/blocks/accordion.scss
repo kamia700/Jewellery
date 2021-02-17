@@ -108,6 +108,7 @@
   .accordion__btn {
     padding-left: 47px;
     padding-right: 10px;
+    padding-bottom: 15px;
 
     & p {
       margin-bottom: 25px;
@@ -151,6 +152,14 @@
   .accordion__btn {
     padding-left: 23px;
     padding-right: 50px;
+    padding-bottom: 3px;
+
+    & span {
+      font-size: 16px;
+      line-height: 22px;
+
+      padding-right: 0;
+    }
 
     & p {
       font-size: 16px;

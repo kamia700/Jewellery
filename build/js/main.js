@@ -82,6 +82,8 @@ var setPopupCheck = function () {
   var modalCheck = document.querySelector('.check');
   var openCheck = document.querySelectorAll('.product-card__button');
   var close = document.querySelector('.check__close');
+  var plus = document.querySelector('.check__plus');
+
   var targetCheck = document.querySelector('.check__wrap');
 
   var popupEscPressHandler = function (evt) {
@@ -94,7 +96,7 @@ var setPopupCheck = function () {
   var openModalCheck = function () {
     modalCheck.classList.remove('hidden');
     body.classList.add('lock');
-    close.focus();
+    plus.focus();
     document.addEventListener('keydown', popupEscPressHandler);
   };
 

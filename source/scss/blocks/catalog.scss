@@ -89,7 +89,7 @@
   }
 
   .catalog__wrapper {
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .catalog__item:not(:nth-child(3n+3)) {
@@ -108,7 +108,7 @@
 
 @media (max-width: $mobile-width) {
   .catalog__wrapper {
-    margin-top: 40px;
+    margin-top: 0;
   }
 
   .catalog__item {
